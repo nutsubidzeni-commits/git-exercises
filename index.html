@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT სფერო - ჩემი ვებ-გვერდი</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="#">IT ბლოგი</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="#">მთავარი</a>
+                <a class="nav-link" href="#cards-section">ინფორმაცია</a>
+                <a class="nav-link" href="#contact-section">კონტაქტი</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="simpleCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active bg-light text-dark p-5 text-center rounded border">
+                <h2>რა არის IT სფერო?</h2>
+                <p>ეს არის საინფორმაციო ტექნოლოგიების სამყარო, რომელიც ყოველდღე ვითარდება.</p>
+            </div>
+            <div class="carousel-item bg-light text-dark p-5 text-center rounded border">
+                <h2>პროგრამირების სწავლა</h2>
+                <p>პითონი არის ერთ-ერთი საუკეთესო ენა დამწყებთათვის.</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#simpleCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-secondary rounded-circle"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#simpleCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-secondary rounded-circle"></span>
+        </button>
+    </div>
+
+    <div class="container my-5" id="cards-section">
+        <h3 class="text-center mb-4">ტექნოლოგიური მიმართულებები</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Front-End</h5>
+                        <p class="card-text">ვებ-გვერდების ვიზუალური ნაწილის აწყობა HTML და CSS-ის გამოყენებით.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">გაგებება</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Back-End</h5>
+                        <p class="card-text">სერვერული ნაწილის გამართვა და მონაცემთა ბაზებთან მუშაობა.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">გაგება</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Python კოდი</h5>
+                        <p class="card-text">ლოგიკის შექმნა, მონაცემების დამუშავება და ავტომატიზაცია.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">გაგება</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 text-center">
+        <h5>საინტერესო ვიდეო IT-ზე</h5>
+        <div class="ratio ratio-16x9 mx-auto" style="max-width: 500px;">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"></iframe>
+        </div>
+    </div>
+
+    <div class="container my-5" id="contact-section" style="max-width: 450px;">
+        <h4 class="text-center mb-3">დატოვეთ შეტყობინება</h4>
+        <form class="border p-3 rounded bg-white">
+            <div class="mb-3">
+                <label class="form-label">თქვენი მეილი</label>
+                <input type="email" class="form-control" placeholder="სახელი@example.com">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ტექსტი</label>
+                <textarea class="form-control" rows="3" placeholder="დაწერეთ რამე..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary w-100">გაგზავნა</button>
+        </form>
+    </div>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="spinner-border text-secondary my-2" role="status"></div>
+                    <p class="mb-0">ინფორმაცია იტვირთება...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 border-top mt-5">
+        <p class="text-muted mb-0">© 2026 ჩემი პირველი ბუთსთრაფ საიტი.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
