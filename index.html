@@ -3,80 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeHotel - ჯავშნების სისტემა</title>
-    <!-- Bootstrap 5 CSS -->
+    <title>PrimeHotel - Luxury Resort & Spa</title>
+    
+    <!-- Google Fonts - ლამაზი ქართული ფონტი -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans Georgian', sans-serif;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        /* ექსკლუზიური მუქი ოქროსფერი ნავიგაცია */
+        .navbar-luxury {
+            background-color: #1a252f;
+            border-bottom: 4px solid #d4af37; /* ოქროსფერი კანტი */
+        }
+
+        /* მთავარი ბანერი (Hero Section) დიდი ფოტოთი */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            color: #fff;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #d4af37; /* ოქროსფერი */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* ბარათების (Cards) სტილი */
+        .card-luxury {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            background-color: white;
+        }
+        
+        .card-luxury:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header-luxury {
+            background-color: #1a252f;
+            color: #d4af37;
+            font-weight: 700;
+            border-bottom: 2px solid #d4af37;
+            font-size: 1.2rem;
+        }
+
+        /* ოთახების ფოტოების ზომები */
+        .room-img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #d4af37;
+        }
+
+        /* ფასის ბეიჯი */
+        .badge-luxury {
+            background-color: #d4af37;
+            color: #1a252f;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        /* ოქროსფერი პრემიუმ ღილაკი */
+        .btn-luxury {
+            background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+            border: none;
+            color: #1a252f;
+            font-weight: 700;
+            padding: 14px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-luxury:hover {
+            background: linear-gradient(135deg, #aa7c11 0%, #d4af37 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* ინპუტები */
+        .form-control-luxury {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+        }
+        .form-control-luxury:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+        }
+
+        /* მდიდრული ფუტერი */
+        .footer-luxury {
+            background-color: #111a22;
+            border-top: 4px solid #d4af37;
+            color: #a0aab2;
+        }
+    </style>
 </head>
-<body class="bg-light">
+<body>
 
     <!-- ნავიგაცია -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">🏨 PrimeHotel</a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-luxury shadow">
+        <div class="container py-2">
+            <a class="navbar-brand fw-bold fs-3" href="#" style="color: #d4af37; letter-spacing: 1px;">
+                ✨ PRIME HOTEL
+            </a>
+            <span class="text-white-50 fs-6 d-none d-md-inline">Luxury Resort & Spa</span>
         </div>
     </nav>
 
-    <!-- ჰედერი -->
-    <header class="bg-primary text-white text-center py-5 shadow-sm">
+    <!-- დიდი ბანერი ფოტოთი -->
+    <header class="hero-section">
         <div class="container">
-            <h1 class="display-4 fw-bold">სასტუმროს თავისუფალი ოთახები</h1>
-            <p class="lead">მართეთ თქვენი ჯავშნები მარტივად და სწრაფად</p>
+            <h1 class="hero-title mb-3">ხელოვნების ნიმუში დასვენებაში</h1>
+            <p class="hero-subtitle fw-bold text-uppercase tracking-wider">სასტუმროს მართვისა და რეზერვაციის უმაღლესი სისტემა</p>
         </div>
     </header>
 
-    <!-- ოთახების სექცია -->
-    <main class="container my-5">
-        <div class="row g-4">
+    <!-- მთავარი კონტენტი -->
+    <div class="container my-5 pb-5">
+        <div class="row g-5">
+            
+            <!-- მარცხნივ: ოთახები ფოტოებით -->
+            <div class="col-lg-6">
+                <div class="card card-luxury h-100">
+                    <div class="card-header card-header-luxury py-3 px-4 d-flex justify-content-between align-items-center">
+                        <span>🚪 ხელმისაწვდომი ლუქს ოთახები</span>
+                        <span class="badge bg-warning text-dark rounded-pill">VIP სტატუსი</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush">
+                            
+                            <!-- ოთახი 101 -->
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-3 px-4 border-bottom">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=150&q=80" alt="Room 101" class="room-img">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold fs-6">ოთახი 101</h5>
+                                        <small class="text-muted">Premium Single Room</small>
+                                    </div>
+                                </div>
+                                <span class="badge-luxury">120₾ / ღამე</span>
+                            </div>
 
-            <!-- ოთახი 1 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold text-dark">ოთახი 101</h5>
-                        <p class="text-muted">ტიპი: სტანდარტული ორადგილიანი</p>
-                        <h4 class="text-primary fw-bold my-3">120 ₾ <small class="text-muted">/ ღამე</small></h4>
-                        <span class="badge bg-success px-3 py-2 rounded-pill mb-3">თავისუფალი</span>
-                        <button class="btn btn-outline-primary w-100 rounded-pill">დაჯავშნა</button>
+                            <!-- ოთახი 102 -->
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-3 px-4 border-bottom">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=150&q=80" alt="Room 102" class="room-img">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold fs-6">ოთახი 102</h5>
+                                        <small class="text-muted">Royal Executive Suite</small>
+                                    </div>
+                                </div>
+                                <span class="badge-luxury">250₾ / ღამე</span>
+                            </div>
+
+                            <!-- ოთახი 103 -->
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-3 px-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=150&q=80" alt="Room 103" class="room-img">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold fs-6">ოთახი 103</h5>
+                                        <small class="text-muted">Grand Family King</small>
+                                    </div>
+                                </div>
+                                <span class="badge-luxury">180₾ / ღამე</span>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ოთახი 2 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold text-dark">ოთახი 102</h5>
-                        <p class="text-muted">ტიპი: ლუქსი (Suite)</p>
-                        <h4 class="text-primary fw-bold my-3">250 ₾ <small class="text-muted">/ ღამე</small></h4>
-                        <span class="badge bg-success px-3 py-2 rounded-pill mb-3">თავისუფალი</span>
-                        <button class="btn btn-outline-primary w-100 rounded-pill">დაჯავშნა</button>
+            <!-- მარჯვნივ: დაჯავშნის ფორმა -->
+            <div class="col-lg-6">
+                <div class="card card-luxury h-100">
+                    <div class="card-header card-header-luxury py-3 px-4">
+                        📝 ახალი რეზერვაციის გაფორმება
+                    </div>
+                    <div class="card-body p-4 p-xl-5">
+                        <form id="booking-form" onsubmit="event.preventDefault(); alert('🎉 რეზერვაცია წარმატებით გაფორმდა მითითებულ სახელსა და ოთახზე!'); this.reset();">
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-secondary">სტუმრის სრული სახელი</label>
+                                <input type="text" class="form-control form-control-luxury form-control-lg" required placeholder="მაგ: ნინო ნუცუბიძე">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-secondary">სასურველი აპარტამენტი</label>
+                                <select class="form-select form-control-luxury form-select-lg">
+                                    <option value="101">ოთახი 101 (Premium Single)</option>
+                                    <option value="102">ოთახი 102 (Royal Executive Suite)</option>
+                                    <option value="103">ოთახი 103 (Grand Family King)</option>
+                                </select>
+                            </div>
+                            <div class="mb-5">
+                                <label class="form-label fw-bold text-secondary">ვიზიტის ხანგრძლივობა (ღამე)</label>
+                                <input type="number" class="form-control form-control-luxury form-control-lg" min="1" value="1" required>
+                            </div>
+                            <button type="submit" class="btn btn-luxury btn-lg w-100 fs-5">✨ დაჯავშნის დადასტურება</button>
+                        </form>
                     </div>
                 </div>
             </div>
-
-            <!-- ოთახი 3 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold text-dark">ოთახი 103</h5>
-                        <p class="text-muted">ტიპი: საოჯახო აპარტამენტი</p>
-                        <h4 class="text-primary fw-bold my-3">180 ₾ <small class="text-muted">/ ღამე</small></h4>
-                        <span class="badge bg-danger px-3 py-2 rounded-pill mb-3">დაკავებულია</span>
-                        <button class="btn btn-secondary w-100 rounded-pill" disabled>მიუწვდომელია</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </main>
+
+        <!-- აქტიური ჯავშნები -->
+        <div class="row mt-5 pt-2">
+            <div class="col-12">
+                <div class="card card-luxury border-0">
+                    <div class="card-header card-header-luxury py-3 px-4">
+                        📋 მიმდინარე აქტიური რეზერვაციები
+                    </div>
+                    <div class="card-body text-center py-5">
+                        <div class="text-muted fs-5">
+                            <span class="d-block mb-3" style="font-size: 2.5rem;">✨</span> სისტემაში აქტიური ჯავშნები ამ მომენტში არ ფიქსირდება.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ფუტერი -->
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <p class="mb-0">&copy; 2026 PrimeHotel. ყველა უფლება დაცულია.</p>
+    <footer class="footer-luxury text-center py-5 mt-auto">
+        <div class="container">
+            <p class="mb-2 fs-5 fw-bold text-white" style="color: #d4af37 !important;">PRIME HOTEL RESORT & SPA</p>
+            <p class="mb-0 opacity-50 small">&copy; 2026 ყველა უფლება დაცულია. სასტუმროს ციფრული ეკოსისტემა.</p>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS და Popover -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
