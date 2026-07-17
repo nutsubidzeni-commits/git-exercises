@@ -1,4 +1,4 @@
-/* 1. ჩარევა: სათაურების ზომის შეცვლა */
+/* 1. ჩარევა: სათაურების ზომის შეცვლა და დახვეწა */
 h2, h3 {
     color: #333333;
     font-weight: 500;
@@ -7,9 +7,15 @@ h2, h3 {
 /* 2. ჩარევა: ქარდებს შორის დაშორების (padding) დამატება */
 .card-body {
     padding: 30px !important;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* 3. ჩარევა: ფუტერის ტექსტის ოდნავ დაპატარავება */
 footer p {
     font-size: 14px;
+    letter-spacing: 0.5px;
 }
